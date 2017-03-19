@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header-menu />
-    <page title='This is a main page' />
+    <router-view></router-view>
   </div>
 </template>
 

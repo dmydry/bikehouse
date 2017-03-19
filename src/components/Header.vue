@@ -5,17 +5,17 @@
       <b-nav-toggle target="nav_collapse"/>
 
       <a class="navbar-brand" style="color:white" to="/">
-        <span>{{title}}</span>
+        <span><router-link to="/" class="navbar-brand">{{title}}</router-link></span>
       </a>
 
       <b-collapse is-nav id="nav_collapse">
         <b-nav is-nav-bar>
-          <b-nav-item>{{menu.support}}</b-nav-item>
-          <b-nav-item>{{menu.docs}}</b-nav-item>
-          <b-nav-item>{{menu.contact}}</b-nav-item>
+          <b-nav-item><router-link to="support" class="nav-link">{{menu.support}}</router-link></b-nav-item>
+          <b-nav-item><router-link to="docs" class="nav-link">{{menu.docs}}</router-link></b-nav-item>
+          <b-nav-item><router-link to="contact" class="nav-link">{{menu.contact}}</router-link></b-nav-item>
         </b-nav>
         <b-nav is-nav-bar class="ml-auto">
-          <b-nav-item-dropdown :text="menu.lang" right-alignment>
+          <b-nav-item-dropdown :text="menu.lang" right-alignment class="nav-link">
             <a href class="dropdown-item active">
               EN
             </a>
@@ -23,7 +23,7 @@
               ES
             </a>
           </b-nav-item-dropdown>
-          <b-nav-item-dropdown right-alignment>
+          <b-nav-item-dropdown right-alignment class="nav-link">
             <template slot="text">
               <span style="font-weight: bold;">{{menu.user}}</span>
             </template>

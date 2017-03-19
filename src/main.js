@@ -5,7 +5,7 @@ import BootstrapVue from 'bootstrap-vue';
 import App from './App';
 import Header from './components/Header';
 import Page from './components/Page';
-// import router from './router';
+import router from './router';
 
 Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
@@ -15,7 +15,7 @@ Vue.component('page', Page);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  // router,
+  router,
   template: '<App/>',
   components: { App },
 });

@@ -4,11 +4,13 @@ import Vue from 'vue';
 import BootstrapVue from 'bootstrap-vue';
 import App from './App';
 import Header from './components/Header';
+import Page from './components/Page';
 // import router from './router';
 
 Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
 Vue.component('header-menu', Header);
+Vue.component('page', Page);
 
 /* eslint-disable no-new */
 new Vue({

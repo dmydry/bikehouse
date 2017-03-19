@@ -1,8 +1,7 @@
 <template>
   <div id="app">
-    <!--<img src="./assets/logo.png">-->
-    <!--<router-view></router-view>-->
     <header-menu />
+    <page title='This is a main page' />
   </div>
 </template>
 
@@ -13,8 +12,6 @@ export default {
 </script>
 
 <style>
-  /*@import './assets/css/style.css';*/
-
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

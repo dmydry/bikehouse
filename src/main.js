@@ -6,6 +6,7 @@ import App from './App';
 import Header from './components/Header';
 import Page from './components/Page';
 import Top from './components/Top';
+import Catalog from './components/Catalog';
 import router from './router';
 
 Vue.config.productionTip = false;
@@ -13,6 +14,7 @@ Vue.use(BootstrapVue);
 Vue.component('header-menu', Header);
 Vue.component('page', Page);
 Vue.component('top', Top);
+Vue.component('catalog', Catalog);
 
 /* eslint-disable no-new */
 new Vue({

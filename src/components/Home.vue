@@ -5,12 +5,14 @@
       :subtitle='subtitle'
       :desc='desc'
     />
-    <top />
+    <top/>
+    <catalog/>
   </div>
 </template>
 
 <script>
-  const desc = '<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>';
+  const desc = `<p>It uses utility classes for typography and spacing to
+                   space content out within the larger container.</p>`;
 
   export default {
     name: 'home',

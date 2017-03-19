@@ -1,11 +1,20 @@
 <template>
   <div class="contact">
-    <page title='This is a contact page' />
+    <page
+      :title='title'
+      :subtitle='subtitle'
+    />
   </div>
 </template>
 
 <script>
   export default {
     name: 'contact',
+    data() {
+      return {
+        title: 'Contact',
+        subtitle: 'this is a contact page',
+      };
+    },
   };
 </script>

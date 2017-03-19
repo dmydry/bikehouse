@@ -1,15 +1,15 @@
 <template>
   <div class="catalog">
 
-    <div class='pageBlock searchCatalog col-4'>
+    <div class='searchCatalog col-4'>
       <h3>Motorbikes Catalog</h3>
       <b-form-input type='text' size='md' v-model='keyword' placeholder='Search by name'/>
-      <div v-if="!filteredCatalog[0]" class="alert alert-warning" role="alert">
-        <strong>We are sorry, </strong>no motorbikes found. Please try to type another name
-      </div>
     </div>
 
     <div class="pageBlock">
+      <div v-if="!filteredCatalog[0]" class="alert alert-warning" role="alert">
+        <strong>We are sorry, </strong>no motorbikes found. Please try to type another name
+      </div>
       <div class='d-flex flex-wrap justify-content-center v-if="filteredCatalog[0]"'>
         <div v-for='item in filteredCatalog'>
           <div class="card cardCatalog" @click="$root.$emit('show::modal','modal2')">
@@ -56,7 +56,7 @@
   };
 </script>
 
-<style>
+<style scoped>
   .cardCatalog {
     margin: 10px;
     max-width: 150px;
@@ -82,7 +82,7 @@
   }
 
   .searchCatalog {
-    /*margin: 40px auto;*/
+    margin: 40px auto;
     top: 0;
     bottom: 0;
     left: 0;

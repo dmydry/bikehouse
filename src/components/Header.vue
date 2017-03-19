@@ -12,7 +12,10 @@
         <b-nav is-nav-bar>
           <b-nav-item><router-link to="support" class="nav-link">{{menu.support}}</router-link></b-nav-item>
           <b-nav-item><router-link to="docs" class="nav-link">{{menu.docs}}</router-link></b-nav-item>
-          <b-nav-item><router-link to="contact" class="nav-link">{{menu.contact}}</router-link></b-nav-item>
+          <b-nav-item>
+            <a v-if="$route.path === '/'" href="#contact" class="nav-link">{{menu.contact}}</a>
+            <a v-else href="/#contact" class="nav-link">{{menu.contact}}</a>
+          </b-nav-item>
         </b-nav>
         <b-nav is-nav-bar class="ml-auto">
           <b-nav-item-dropdown :text="menu.lang" right-alignment class="nav-link">
@@ -58,8 +61,3 @@
     },
   };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-  @import '../../node_modules/bootstrap-vue/node_modules/bootstrap/dist/css/bootstrap.css';
-</style>

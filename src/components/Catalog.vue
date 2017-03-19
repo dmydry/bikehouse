@@ -9,16 +9,17 @@
       </div>
     </div>
 
-    <div class='d-flex flex-wrap justify-content-center v-if="filteredCatalog[0]"'>
-      <div v-for='item in filteredCatalog'>
-        <div class="card cardCatalog" @click="$root.$emit('show::modal','modal2')">
-          <img :src="item.img" alt="Card image cap">
-          <div class="card-block">
-            <h6 class="card-title">{{item.name}}</h6>
+    <div class="pageBlock">
+      <div class='d-flex flex-wrap justify-content-center v-if="filteredCatalog[0]"'>
+        <div v-for='item in filteredCatalog'>
+          <div class="card cardCatalog" @click="$root.$emit('show::modal','modal2')">
+            <img :src="item.img" alt="Card image cap">
+            <div class="card-block">
+              <h6 class="card-title">{{item.name}}</h6>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
 
     <b-modal

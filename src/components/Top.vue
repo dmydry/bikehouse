@@ -53,8 +53,8 @@
   }
 
   .top {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .modal {

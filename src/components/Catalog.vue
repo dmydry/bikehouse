@@ -92,4 +92,8 @@
   .card-title {
     margin: 0;
   }
+  .catalog {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 </style>

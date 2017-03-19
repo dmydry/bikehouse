@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Page from './components/Page';
 import Top from './components/Top';
 import Catalog from './components/Catalog';
+import Contact from './components/Contact';
 import router from './router';
 
 Vue.config.productionTip = false;
@@ -15,6 +16,7 @@ Vue.component('header-menu', Header);
 Vue.component('page', Page);
 Vue.component('top', Top);
 Vue.component('catalog', Catalog);
+Vue.component('contact', Contact);
 
 /* eslint-disable no-new */
 new Vue({

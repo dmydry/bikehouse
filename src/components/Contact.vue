@@ -68,6 +68,6 @@
 
   img {
     height: 200px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 </style>

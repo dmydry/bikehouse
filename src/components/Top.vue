@@ -1,15 +1,15 @@
 <template>
-  <div class="top">
+  <div class='top'>
 
     <div class='pageBlock'>
       <div class='d-flex justify-content-center'>
         <div v-for='item in items'>
-          <div class="card">
-            <img :src="item.img" alt="Card image cap">
-            <div class="card-block">
-              <h5 class="card-title">{{item.name}}</h5>
-              <p class="card-text">{{item.desc}}</p>
-              <b-btn class="btn btn-info" @click="showModal(item)">Show details</b-btn>
+          <div class='card'>
+            <img :src='item.img' alt='Card image cap'>
+            <div class='card-block'>
+              <h5 class='card-title'>{{item.name}}</h5>
+              <p class='card-text'>{{item.desc}}</p>
+              <b-btn class='btn btn-info' @click='showModal(item)'>Show details</b-btn>
             </div>
           </div>
         </div>
@@ -17,18 +17,45 @@
     </div>
 
     <b-modal
-      id="modal1"
-      title="Motorbike details"
-      ok-title="Make a booking"
-      close-title="Cancel"
-      :disable-success="invalidRange"
+      id='modal1'
+      title='Motorbike details'
+      ok-title='Make a booking'
+      close-title='Cancel'
+      :disable-success='invalidRange'
       @ok='book'
       @cancel='closePicker'
     >
-      <datepicker v-on:selected="datePick" :disabled='disabled' v-model="from" name="From"></datepicker>
-      <datepicker v-on:selected="datePick" :disabled='disabled' v-model="to" name="To"></datepicker>
 
-      <div v-if="invalidRange" class="alert alert-warning" role="alert">
+      <div class="form-group row">
+        <label class="col-sm-3 col-form-label">Rent out</label>
+        <div class="col-sm-8">
+          <datepicker
+            @selected='datePick'
+            :disabled='disabled'
+            v-model='from'
+            name='From'
+            placeholder='Rent out'
+            input-class='form-control'
+            monday-first='true'
+          />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-3 col-form-label">Return</label>
+        <div class="col-sm-8">
+          <datepicker
+            @selected='datePick'
+            :disabled='disabled'
+            v-model='to'
+            name='To'
+            placeholder='Return'
+            input-class='form-control'
+            monday-first='true'
+          />
+        </div>
+      </div>
+
+      <div v-if='invalidRange' class='alert alert-warning' role='alert'>
         <strong>Oops! </strong>Minimum 5 days rental is required
       </div>
 
@@ -36,7 +63,7 @@
       vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly
       domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide
       off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as
-      he looked. "What's happened to me?" he thought. It wasn't a dream. His room, a proper human
+      he looked. 'What's happened to me?' he thought. It wasn't a dream. His room, a proper human
     </b-modal>
   </div>
 </template>

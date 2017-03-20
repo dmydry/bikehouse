@@ -10,9 +10,12 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
-    "bootstrap-vue": "^0.10.0-alpha.4",
+    "bootstrap": "^4.0.0-alpha.6",
+    "bootstrap-vue": "https://github.com/dmydry/bootstrap-vue.git",
+    "moment": "^2.18.0",
     "vue": "^2.2.2",
-    "vue-router": "^2.2.0"
+    "vue-router": "^2.2.0",
+    "vuejs-datepicker": "^0.6.3"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",

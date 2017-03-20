@@ -1,9 +1,12 @@
+import moment from 'moment';
+
 class Bike {
-  constructor(name, bikeClass, desc, img) {
+  constructor(name, bikeClass, desc, img, dates) {
     this.name = name;
     this.bikeClass = bikeClass;
     this.desc = desc;
     this.img = img;
+    this.dates = dates;
   }
 }
 
@@ -25,7 +28,15 @@ export const items = (count, imgSize) => {
       `Honda Vario ${colors[Math.floor(Math.random() * colors.length)]}`,
       '110cc',
       descriptions[Math.floor(Math.random() * descriptions.length)],
-      `http://placehold.it/${imgSize}`));
+      `http://placehold.it/${imgSize}`,
+      {
+        disabled: {
+          today: moment('00:00', 'HH:mm').toDate(),
+          from: moment('00:00', 'HH:mm').add(10, 'd').toDate(), // Disable all dates after specific date
+          to: moment('00:00', 'HH:mm').add(0, 'd').toDate(), // Disable all dates up to specific date
+        },
+      },
+    ));
   }
   return bikes;
 };

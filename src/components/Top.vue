@@ -36,7 +36,7 @@
             name='From'
             placeholder='Rent out'
             input-class='form-control'
-            monday-first='true'
+            monday-first
           />
         </div>
       </div>
@@ -50,7 +50,7 @@
             name='To'
             placeholder='Return'
             input-class='form-control'
-            monday-first='true'
+            monday-first
           />
         </div>
       </div>

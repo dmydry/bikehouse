@@ -7,8 +7,8 @@
           <div class='card'>
             <img :src='item.img' alt='Card image cap'>
             <div class='card-block'>
-              <h5 class='card-title'>{{item.name}}</h5>
-              <p class='card-text'>{{item.desc}}</p>
+              <h5 class='card-title'>{{item.brand}} {{item.model}} {{item.color}}</h5>
+              <p class='card-text'>{{item.description}}</p>
               <b-btn class='btn btn-info' @click='showModal(item)'>Show details</b-btn>
             </div>
           </div>

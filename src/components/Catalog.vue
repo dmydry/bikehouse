@@ -15,7 +15,7 @@
           <div class="card cardCatalog" @click="$root.$emit('show::modal','modal2')">
             <img :src="item.img" alt="Card image cap">
             <div class="card-block">
-              <h6 class="card-title">{{item.name}}</h6>
+              <h6 class="card-title">{{item.brand}} {{item.model}} {{item.color}}</h6>
             </div>
           </div>
         </div>
@@ -50,7 +50,9 @@
     computed: {
       filteredCatalog() {
         return this.items.filter(item =>
-          item.name.toLowerCase().includes(this.keyword.toLowerCase()));
+          item.brand.toLowerCase().includes(this.keyword.toLowerCase()) ||
+          item.model.toLowerCase().includes(this.keyword.toLowerCase()) ||
+          item.color.toLowerCase().includes(this.keyword.toLowerCase()));
       },
     },
   };
@@ -60,6 +62,8 @@
   .cardCatalog {
     margin: 10px;
     max-width: 150px;
+    height: 241px;
+
     cursor: pointer;
   }
 
